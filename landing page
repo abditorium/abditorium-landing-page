@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abditorium (Pty) Ltd</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(-100px);
+            animation: flyIn 3s ease-in-out forwards;
+        }
+        .gem {
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(-100px);
+            animation: flyIn 4s ease-in-out forwards;
+        }
+        @keyframes flyIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .gem-particles {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="/mnt/data/Abditorium Logo July 2022.jpg" alt="Abditorium Logo" class="img-fluid">
+        <img src="/mnt/data/Abditorium Logo July 2022.jpg" alt="Gem" class="gem" id="gem">
+    </div>
+    <div class="gem-particles" id="gem-particles">
+        <h1>Welcome to Abditorium (Pty) Ltd</h1>
+        <ul>
+            <li><a href="#section1">About Us</a></li>
+            <li><a href="#section2">Our Services</a></li>
+            <li><a href="#section3">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('gem').addEventListener('click', function() {
+            this.style.display = 'none';
+            document.getElementById('gem-particles').style.display = 'block';
+            // Add more animations or particle effects as needed
+        });
+    </script>
+</body>
+</html>
